@@ -76,17 +76,19 @@ app.get('/api/scrap/:name', (req,res,name)=>{
 
             })  
         }
-        console.log("Fetching Url",finalResult);
-        //console.log(resultMovie);
-        
-        
+        console.log("Fetching Url",finalResult);  
     })
     
     
     })
+
+    app.get('/api/test', (req,res,name)=>{
+        // name="undisputed";
+        res.send('No Worries')
+    })
     
 
 
-const port = 5000;
+const port = process.env.port || 5000;
 
 app.listen(port, ()=> console.log(`server starting ${port}`))
